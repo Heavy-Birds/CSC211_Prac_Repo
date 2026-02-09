@@ -5,7 +5,6 @@ public class biasedshuffle {
         Integer[] shuffled = new Integer[arrayLength];
         for (int i = 0;i < arrayLength; i++){
             shuffled[i] = i + 1;
-            //System.out.println(shuffled[i]);
         }
         int random;
         for (int x = 0;x < arrayLength; x++){
@@ -19,3 +18,4 @@ public class biasedshuffle {
         }
     }
 }
+
