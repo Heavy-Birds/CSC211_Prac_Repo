@@ -20,7 +20,7 @@ public class mcsOn3 {
         return maxSoFar;
     }
 
-    int mcsOn2A(Integer[] x){
+    static int mcsOn2A(Integer[] x){
         int n = x.length;
         int maxSoFar = 0;
         int count = 0;
@@ -38,7 +38,7 @@ public class mcsOn3 {
         return maxSoFar;
     }
 
-    int mcsOn2B(Integer[] x){
+    static int mcsOn2B(Integer[] x){
         int n = x.length;
         Integer[] sumTo = new Integer[n + 1];
         for (int y = 0; y < n + 1;y++){
@@ -69,7 +69,7 @@ public class mcsOn3 {
         return maxSoFar;
     }
 
-    double mcsOn(Integer[] x){
+    static double mcsOn(Integer[] x){
         int N = x.length;
         double maxSoFar = 0;
         double maxToHere = 0;
