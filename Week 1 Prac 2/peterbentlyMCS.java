@@ -1,7 +1,6 @@
-
 public class peterbentlyMCS {
 
-    int mcsOn3(Integer[] x){
+    static int mcsOn3(int[] x){
         int n = x.length;
         int maxSoFar = 0;
         for (int low = 0; low < n;low++){
@@ -15,10 +14,11 @@ public class peterbentlyMCS {
                 }
             }
         }
-        return 0;
+        //System.out.println();
+        return maxSoFar;
     }
 
-    int mcsOn2A(int[] x){
+    static int mcsOn2A(int[] x){
         int n = x.length;
         int maxSoFar = 0;
         for (int low = 0; low < n;low++){
@@ -34,7 +34,7 @@ public class peterbentlyMCS {
         return maxSoFar;
     }
 
-    int mcsOn2B(int[] x){
+    static int mcsOn2B(int[] x){
         int n = x.length;
         Integer[] sumTo = new Integer[n + 1];
         for (int y = 0; y < n + 1;y++){
@@ -61,11 +61,11 @@ public class peterbentlyMCS {
                 }
             }
         }
-        
+
         return maxSoFar;
     }
 
-    int mcsOn(int[] x){
+    static double mcsOn(int[] x){
         int N = x.length;
         double maxSoFar = 0;
         double maxToHere = 0;
@@ -100,6 +100,3 @@ public class peterbentlyMCS {
 
     }
 }
-
-
-
