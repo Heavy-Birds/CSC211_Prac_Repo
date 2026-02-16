@@ -66,8 +66,14 @@ public class peterbentlyMCS {
     }
 
     int mcsOn(int[] x){
-
-        return 0;
+        int N = x.length;
+        double maxSoFar = 0;
+        double maxToHere = 0;
+        for (int i = 0; i < N; i++){
+            maxToHere = Math.max(maxToHere + x[i],0);
+            maxSoFar = Math.max(maxSoFar,maxToHere);
+        }
+        return maxSoFar;
     }
 
     public static void main(String[] args){
@@ -94,5 +100,6 @@ public class peterbentlyMCS {
 
     }
 }
+
 
 
