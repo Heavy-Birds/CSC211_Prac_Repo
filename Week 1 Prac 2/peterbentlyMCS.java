@@ -35,8 +35,34 @@ public class peterbentlyMCS {
     }
 
     int mcsOn2B(int[] x){
-
-        return 0;
+        int n = x.length;
+        Integer[] sumTo = new Integer[n + 1];
+        for (int y = 0; y < n + 1;y++){
+            sumTo[y] = 0;
+        }
+        int maxSoFar = 0;
+        for (int i = 0; i < n;i++) {
+            if (i != 0) {
+                sumTo[i] = sumTo[i - 1] + x[i];
+            } else {
+                sumTo[i] = x[i];
+            }
+        }
+        for (int low = 0; low < n; low++){
+            for (int high = low; high < n;  high++){
+                int sum = 0;
+                if (low != 0){
+                    sum = sumTo[high] - sumTo[low-1];
+                }else {
+                    sum = sumTo[high];
+                }
+                if (sum > maxSoFar){
+                    maxSoFar = sum;
+                }
+            }
+        }
+        
+        return maxSoFar;
     }
 
     int mcsOn(int[] x){
@@ -68,4 +94,5 @@ public class peterbentlyMCS {
 
     }
 }
+
 
