@@ -19,8 +19,19 @@ public class peterbentlyMCS {
     }
 
     int mcsOn2A(int[] x){
+        int n = x.length;
+        int maxSoFar = 0;
+        for (int low = 0; low < n;low++){
+            int sum = 0;
+            for (int r = low;r < n; r++){
+                sum += x[r];
+                if (sum > maxSoFar){
+                    maxSoFar = sum;
+                }
+            }
+        }
 
-        return 0;
+        return maxSoFar;
     }
 
     int mcsOn2B(int[] x){
@@ -57,3 +68,4 @@ public class peterbentlyMCS {
 
     }
 }
+
